@@ -6,7 +6,6 @@ const server = express();
 
 server.use(bodyParser.json());
 server.use(cors());
-
 server.get('/', async (req, res) => {
   res.status(200).json('hello');
 });
