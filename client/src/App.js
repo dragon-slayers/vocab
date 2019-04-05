@@ -6,20 +6,6 @@ import Word from './components/Word';
 import Navigation from './components/Navigation/Navigation';
 import WordForm from './components/WordForm';
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      wordList: []
-    };
-  }
-  componentDidMount() {
-    console.log('cdm running');
-    axios.get('http://localhost:5000/api/').then(res => {
-      console.log(res);
-      this.setState({ wordList: res.data });
-    });
-  }
-
   render() {
     return (
       <div className="App">
