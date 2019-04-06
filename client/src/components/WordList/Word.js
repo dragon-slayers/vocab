@@ -1,15 +1,19 @@
 import React from 'react';
 
-const Word = props => {
-  return (
-    <div>
-      {props.word.name}
-      <ul>
-        <li>{props.word.definition}</li>
-        <li>{props.word.description}</li>
-      </ul>
-    </div>
-  );
-};
-
+class Word extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+  render() {
+    return (
+      <div>
+        {this.props.word.name}
+        <ul>
+          <li>{this.props.word.definition}</li>
+          <li>{this.props.word.description}</li>
+        </ul>
+      </div>
+    );
+  }
+}
 export default Word;
